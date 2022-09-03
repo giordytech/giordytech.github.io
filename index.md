@@ -2,17 +2,11 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# Assemblaggio PC desktop con allestimento gaming
 
-[Link to another page](./another-page.html).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+Scegliamo assieme i componenti migliori per il tuo allestimento per un PC gaming desktop in base alle tue esigenze.
+Una volta completata la selezione, provvederò ad ordinare i tuoi componenti a prezzi competitivi.
+Provvederò a completare l'intero assemblagggio in modo che tu possa immediatamente iniziare a sfruttare la potenza del tuo nuovo PC.
 
 ## Header 2
 
