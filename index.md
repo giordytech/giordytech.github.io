@@ -15,7 +15,7 @@ Esempi:
  - Controllo e pulizia virus / malware
  - Selezione ed installazione componenti hardware potenziati
 
-# Riparazioni hardware / software
+# Riparazioni hardware e software
 Il tuo dipartimento IT a portata di click! Mandaci la tua richiesta e verificheremo assieme cosa non va col tuo computer!
 Esempi:
  - Sostituzione tastiera
