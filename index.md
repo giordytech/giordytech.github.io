@@ -3,9 +3,11 @@ layout: default
 ---
 
 # Assemblaggio PC desktop con allestimento gaming
+[!gaming desktop](assets/img/IMG_20220904_190744_482.jpg)
 Scegliamo assieme i componenti migliori per il tuo allestimento per un PC gaming desktop in base alle tue esigenze.
 Una volta completata la selezione, provvederò ad ordinare i tuoi componenti a prezzi competitivi.
 Provvederò a completare l'intero assemblagggio in modo che tu possa immediatamente iniziare a sfruttare la potenza del tuo nuovo PC.
+
 
 # Trasforma il tuo vecchio PC in uno come nuovo
 Spesso non è necessario comprare un nuovo PC spendendo tanti soldi. Con una spesa molto contenuta, possiamo applicare piccole migliorie a livello hardware/software dai grandi risultati. Non crederai ai tuoi occhi!
