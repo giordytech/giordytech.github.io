@@ -3,10 +3,28 @@ layout: default
 ---
 
 # Assemblaggio PC desktop con allestimento gaming
-
 Scegliamo assieme i componenti migliori per il tuo allestimento per un PC gaming desktop in base alle tue esigenze.
 Una volta completata la selezione, provvederò ad ordinare i tuoi componenti a prezzi competitivi.
 Provvederò a completare l'intero assemblagggio in modo che tu possa immediatamente iniziare a sfruttare la potenza del tuo nuovo PC.
+
+# Trasforma il tuo vecchio PC in uno come nuovo
+Spesso non è necessario comprare un nuovo PC spendendo tanti soldi. Con una spesa molto contenuta, possiamo applicare piccole migliorie a livello hardware/software dai grandi risultati. Non crederai ai tuoi occhi!
+Esempi:
+ - Aggiornamento sistema operativo
+ - Pulizia di sistema
+ - Controllo e pulizia virus / malware
+ - Selezione ed installazione componenti hardware potenziati
+
+# Riparazioni hardware / software
+Il tuo dipartimento IT a portata di click! Mandaci la tua richiesta e verificheremo assieme cosa non va col tuo computer!
+Esempi:
+ - Sostituzione tastiera
+ - Sostituzione alimentatore portatile
+ - Riparazione errori di sistema
+ - Riparazione installazioni
+ - Recupero dati con software dedicati
+
+**Contattaci oggi stesso, non aspettare!**
 
 
 <!--
