@@ -24,7 +24,7 @@ Esempi:
  - Riparazione installazioni
  - Recupero dati con software dedicati
 
-**Contattaci oggi stesso, non aspettare!**
+**[Contattaci oggi stesso, non aspettare!](mailto:giordanoserra7@gmail.com)**
 
 
 <!--
