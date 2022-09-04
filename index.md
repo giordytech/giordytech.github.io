@@ -8,6 +8,8 @@ Scegliamo assieme i componenti migliori per il tuo allestimento per un PC gaming
 Una volta completata la selezione, provvederò ad ordinare i tuoi componenti a prezzi competitivi.
 Provvederò a completare l'intero assemblagggio in modo che tu possa immediatamente iniziare a sfruttare la potenza del tuo nuovo PC.
 
+
+<!--
 ## Header 2
 
 > This is a blockquote following a header.
@@ -115,3 +117,4 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 ```
 The final element.
 ```
+-->
