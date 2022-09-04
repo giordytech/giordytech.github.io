@@ -18,6 +18,7 @@ Esempi:
  - Selezione ed installazione componenti hardware potenziati
 
 # Riparazioni hardware e software
+![riparazioni hardware](assets/img/IMG_20220904_193834_804.jpg )
 Il tuo dipartimento IT a portata di click! Mandaci la tua richiesta e verificheremo assieme cosa non va col tuo computer!
 Esempi:
  - Sostituzione tastiera
