@@ -37,14 +37,15 @@ export const theme = createTheme({
     light: {
       palette: {
         primary: { main: '#2f5aae', dark: '#24478c', contrastText: '#ffffff' },
-        text: { primary: '#272626', secondary: '#5b6472' },
+        // Neve has one text color: no lighter shade for secondary text.
+        text: { primary: '#272626', secondary: '#272626' },
         background: { default: '#ffffff', paper: '#ffffff' },
-        divider: '#e5e7eb',
+        divider: '#d9d9d9',
         surface: {
           alt: '#f4f5f7',
-          footer: '#111827',
+          footer: '#24292e',
           footerText: '#ffffff',
-          footerLink: '#93c5fd',
+          footerLink: '#ffffff',
           link: '#2f5aae',
         },
       },

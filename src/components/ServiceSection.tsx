@@ -13,7 +13,6 @@ const ExamplesCard = ({ examples }: { examples: readonly string[] }) => (
       bgcolor: 'background.paper',
       border: 1,
       borderColor: 'divider',
-      borderRadius: 3,
       padding: { xs: 3, md: 4 },
     }}
   >
@@ -91,7 +90,6 @@ const ServiceSection = ({ service, tone, imageFirst = false }: Props) => {
               width: '100%',
               maxHeight: 480,
               objectFit: 'cover',
-              borderRadius: 3,
               order: { md: imageFirst ? -1 : 0 },
             }}
           />
