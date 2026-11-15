@@ -48,7 +48,11 @@ export const site = {
     height: 630,
     alt: 'GiordyTech',
   },
-  logo: { src: '/images/logo.png', alt: 'GiordyTech' },
+  /**
+   * The header's mark: the laptop and figure from the social-media logo, white on transparent, painted in the
+   * theme's color. Three times the size it is shown at, for sharp high-density screens.
+   */
+  logo: { src: '/images/logo-mark.png', width: 204, height: 132 },
   contact: {
     label: 'Contattaci oggi stesso, non aspettare!',
     /** From the owner's flyer. */

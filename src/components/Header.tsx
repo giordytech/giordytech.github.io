@@ -36,25 +36,24 @@ const Header = () => (
         color="inherit"
         sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}
       >
+        {/* The mark is a shape, not a picture: the file is used as a mask and the theme paints it, brand blue on
+            the white header and white on the dark one. The name beside it already names the link, so it is
+            hidden from screen readers. */}
         <Box
           component="span"
+          aria-hidden
           sx={{
-            display: 'flex',
-            // The logo is a black figure on a transparent background: white on the dark header. A selector,
-            // not `theme.applyStyles`, because a server component can't hand a function to MUI.
-            [`.${darkSchemeClass} &`]: { filter: 'invert(1)' },
+            display: 'block',
+            height: 44,
+            aspectRatio: `${site.logo.width} / ${site.logo.height}`,
+            bgcolor: 'primary.main',
+            maskImage: `url(${site.logo.src})`,
+            maskSize: 'contain',
+            maskRepeat: 'no-repeat',
+            // A selector, not `theme.applyStyles`, because a server component can't hand a function to MUI.
+            [`.${darkSchemeClass} &`]: { bgcolor: 'common.white' },
           }}
-        >
-          {/* A plain <img>: MUI's Box would take width and height as styles, not as the file's size. The file
-              is 132 pixels, three times the 44 shown, for sharp high-density screens. */}
-          <img
-            src={site.logo.src}
-            width={132}
-            height={132}
-            alt=""
-            style={{ height: 44, width: 'auto' }}
-          />
-        </Box>
+        />
         <Typography component="span" variant="h4">
           {site.name}
         </Typography>
