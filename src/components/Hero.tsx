@@ -7,9 +7,7 @@ import { site } from '@/content/site.ts';
 /** The page's opening band, as Neve's hero: the tagline as the main heading and the contact button. */
 const Hero = () => (
   <Section spacing={4} alignItems="flex-start">
-    <Typography variant="h1" sx={{ maxWidth: '16ch' }}>
-      {site.tagline}
-    </Typography>
+    <Typography variant="h1">{site.tagline}</Typography>
     <Button
       variant="contained"
       size="large"
