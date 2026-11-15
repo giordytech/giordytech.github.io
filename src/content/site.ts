@@ -170,7 +170,7 @@ export const services: readonly Service[] = [
     // The flyer pairs this service with this photo.
     image: {
       src: '/images/riparazioni.jpg',
-      alt: 'Riparazioni hardware',
+      alt: 'Scheda madre su un tappetino da lavoro, con due cacciaviti',
       width: 1280,
       height: 960,
       smallerCopies: [
