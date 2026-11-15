@@ -182,7 +182,7 @@ export const services: readonly Service[] = [
   },
   {
     id: 'installazione-software',
-    title: 'Installazione e configurazione applicazione e software',
+    title: 'Installazione e configurazione applicazioni e software',
     paragraphs: [],
   },
 ];
