@@ -16,8 +16,9 @@ Report what is true, not what lands well. Change a position on evidence, never o
 
 ## What this repo is for
 
-GiordyTech's public website, in Italian: PC gaming builds, upgrades of old PCs, hardware and software
-repairs, and a contact address. A static Next.js site after `swiftpost-site-template`, simplified to a
+GiordyTech's public website, in Italian: a computer repair business in Gonnesa offering PC builds,
+hardware and software repairs, PC cleaning and optimization, hardware and driver installation, and
+software installation, with its contact details. A static Next.js site after `swiftpost-site-template`, simplified to a
 single app at the repo root, published to GitHub Pages at <https://giordytech.github.io/>.
 
 ## Where things go
