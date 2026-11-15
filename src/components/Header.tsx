@@ -52,6 +52,12 @@ const Header = () => (
             maskRepeat: 'no-repeat',
             // A selector, not `theme.applyStyles`, because a server component can't hand a function to MUI.
             [`.${darkSchemeClass} &`]: { bgcolor: 'common.white' },
+            // High-contrast modes and printing drop background colors, which would erase a painted mask.
+            printColorAdjust: 'exact',
+            '@media (forced-colors: active)': {
+              bgcolor: 'CanvasText',
+              forcedColorAdjust: 'none',
+            },
           }}
         />
         <Typography component="span" variant="h4">
