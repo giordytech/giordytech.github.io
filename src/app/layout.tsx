@@ -9,8 +9,17 @@ import { colorSchemeAttribute } from '@/styles/staticTheme.ts';
 import { theme } from '@/styles/theme.ts';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: { default: site.name, template: `%s · ${site.name}` },
   description: site.tagline,
+  openGraph: {
+    type: 'website',
+    locale: 'it_IT',
+    siteName: site.name,
+    title: site.name,
+    description: site.tagline,
+  },
+  twitter: { card: 'summary', title: site.name, description: site.tagline },
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (

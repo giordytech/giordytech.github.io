@@ -15,6 +15,8 @@ export interface Service {
 
 export const site = {
   name: 'GiordyTech',
+  /** Where the site is published: the base of canonical links, the sitemap and social previews. */
+  url: 'https://giordytech.github.io/',
   tagline: 'Assemblaggio e riparazione hardware.',
   logo: { src: '/images/logo.png', alt: 'GiordyTech' },
   contact: {
