@@ -43,7 +43,7 @@ export const site = {
   homeTitle: 'Assemblaggio PC desktop con allestimento gaming | GiordyTech',
   /**
    * The picture shown when a link to the site is shared: the square social-media logo, centered on the brand blue,
-   * at 1200×630. Its margins are the designer's, so a platform that crops it to a circle keeps the whole mark.
+   * at 1200×630. Its margins are the designer's, so a platform that crops it to a circle keeps the laptop and the name.
    */
   sharePreview: {
     src: '/images/logo-og.png',
