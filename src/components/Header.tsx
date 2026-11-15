@@ -37,17 +37,24 @@ const Header = () => (
         sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}
       >
         <Box
-          component="img"
-          src={site.logo.src}
-          alt=""
+          component="span"
           sx={{
-            height: 44,
-            width: 'auto',
+            display: 'flex',
             // The logo is a black figure on a transparent background: white on the dark header. A selector,
             // not `theme.applyStyles`, because a server component can't hand a function to MUI.
             [`.${darkSchemeClass} &`]: { filter: 'invert(1)' },
           }}
-        />
+        >
+          {/* A plain <img>: MUI's Box would take width and height as styles, not as the file's size. The file
+              is 132 pixels, three times the 44 shown, for sharp high-density screens. */}
+          <img
+            src={site.logo.src}
+            width={132}
+            height={132}
+            alt=""
+            style={{ height: 44, width: 'auto' }}
+          />
+        </Box>
         <Typography component="span" variant="h4">
           {site.name}
         </Typography>

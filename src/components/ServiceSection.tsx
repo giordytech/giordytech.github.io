@@ -4,7 +4,29 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import Section, { type SectionTone } from '@/components/Section.tsx';
-import type { Service } from '@/content/site.ts';
+import { type Service, services } from '@/content/site.ts';
+
+/**
+ * Every service photo is 1280×960, with 640- and 960-pixel-wide copies beside it (`name-640.jpg`), so a
+ * phone doesn't download the full size for a 343-pixel-wide column.
+ */
+const photo = { width: 1280, height: 960, smallerWidths: [640, 960] } as const;
+
+const photoSrcSet = (src: string) =>
+  [
+    ...photo.smallerWidths.map(
+      (width) => `${src.replace(/\.jpg$/, `-${width}.jpg`)} ${width}w`,
+    ),
+    `${src} ${photo.width}w`,
+  ].join(', ');
+
+/** The photo column: the page width on small screens, half the 1200-pixel container from `md` up. */
+const photoSizes = '(min-width: 900px) 544px, 100vw';
+
+/** The first photo can be on screen when the page opens on a wide screen; later ones load as they come near. */
+const firstPhotoServiceId = services.find(
+  ({ image }) => image !== undefined,
+)?.id;
 
 /** The examples as a bordered card with a check per item, as the cards in Neve's demo. */
 const ExamplesCard = ({ examples }: { examples: readonly string[] }) => (
@@ -83,16 +105,28 @@ const ServiceSection = ({ service, tone, imageFirst = false }: Props) => {
         </Stack>
         {image !== undefined ?
           <Box
-            component="img"
-            src={image.src}
-            alt={image.alt}
             sx={{
-              width: '100%',
-              maxHeight: 480,
-              objectFit: 'cover',
               order: { md: imageFirst ? -1 : 0 },
+              '& > img': {
+                display: 'block',
+                width: '100%',
+                height: 'auto',
+                maxHeight: 480,
+                objectFit: 'cover',
+              },
             }}
-          />
+          >
+            {/* A plain <img>: MUI's Box would take width and height as styles, not as the file's size. */}
+            <img
+              src={image.src}
+              srcSet={photoSrcSet(image.src)}
+              sizes={photoSizes}
+              width={photo.width}
+              height={photo.height}
+              loading={service.id === firstPhotoServiceId ? 'eager' : 'lazy'}
+              alt={image.alt}
+            />
+          </Box>
         : examples !== undefined && <ExamplesCard examples={examples} />}
       </Box>
     </Section>
