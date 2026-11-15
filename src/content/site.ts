@@ -1,6 +1,7 @@
 /**
- * The site's text, in Italian, kept apart from the layout so it can be edited without touching components.
- * Carried over from the Jekyll site's `index.md` (last edit February 2023).
+ * The site's text, in Italian, and the data behind its pictures, kept apart from the layout so they can be
+ * edited without touching components. The text is carried over from the Jekyll site's `index.md` (last edit
+ * February 2023).
  */
 
 export interface Service {
@@ -13,13 +14,24 @@ export interface Service {
   image?: Photo;
 }
 
-/** A photo at its full size, with smaller copies of the same picture for narrower screens. */
+/** A smaller copy of a photo: the same picture and proportions, narrower. */
+export interface PhotoCopy {
+  src: string;
+  width: number;
+}
+
+/**
+ * A photo at its full size, with smaller copies so a phone doesn't download the full size for a 343-pixel-wide
+ * column. The numbers must match the files in `public/images/`: nothing checks them. The service photos are
+ * 1280 pixels wide, the originals' own width; high-density screens between 600 and 899 pixels wide could use
+ * more, but there is nothing sharper to give them.
+ */
 export interface Photo {
   src: string;
   alt: string;
   width: number;
   height: number;
-  smallerCopies: readonly { src: string; width: number }[];
+  smallerCopies: readonly PhotoCopy[];
 }
 
 export const site = {
