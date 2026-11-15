@@ -74,7 +74,8 @@ skill before editing:
 | --- | --- |
 | Checking a claim, choosing an approach | `ref-sp-agents-verification-discipline` |
 | The site (Next, React, MUI) | `ref-sp-js-next`, `ref-sp-js-react`, `ref-sp-js-next-template`, `ref-sp-ux-design`, `ref-sp-ux-accessibility` |
-| Search visibility, metadata | `ref-sp-web-seo` |
+| Search visibility, metadata | `ref-sp-web-seo`, `ref-sp-web-seo-ai` |
+| Social media, traffic and conversion data | `ref-sp-web-social-media`, `ref-sp-web-marketing` |
 | Testing pages in a browser | `ref-sp-dev-playwright-cli` |
 | TypeScript, configs | `ref-sp-js-typescript`, `ref-sp-dev-coding-patterns` |
 | `README.md` | `ref-sp-dev-docs-authoring` |
