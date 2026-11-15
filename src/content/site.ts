@@ -1,7 +1,7 @@
 /**
  * The site's text, in Italian, and the data behind its pictures, kept apart from the layout so they can be
  * edited without touching components. The text is carried over from the Jekyll site's `index.md` (last edit
- * February 2023).
+ * February 2023), with the service headings from the owner's A5 flyer (2026).
  */
 
 export interface Service {
@@ -110,9 +110,10 @@ export const localBusinessData = {
 } as const;
 
 /**
- * The services, headed with the owner's flyer wording ("Volantino A5"), in the order a visitor most likely
- * wants them: PC builds first, as the old site and the home title lead with them, then repairs. The two
- * services only the flyer names have a heading and nothing more until the owner writes about them.
+ * The services, headed with the owner's flyer wording ("Volantino A5"). The order is a guess with no sales data
+ * behind it: PC builds first, as the old site and the home title lead with them, then repairs, the first word of
+ * the Facebook page's title. The two services only the flyer names have a heading and nothing more until the
+ * owner writes about them.
  */
 export const services: readonly Service[] = [
   {
