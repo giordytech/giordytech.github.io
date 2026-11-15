@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import ContactBand from '@/components/ContactBand.tsx';
 import Hero from '@/components/Hero.tsx';
 import ServiceSection from '@/components/ServiceSection.tsx';
-import { services, site } from '@/content/site.ts';
+import { localBusinessData, services, site } from '@/content/site.ts';
 import PageTemplate from '@/templates/PageTemplate.tsx';
 
 // The home page's own title and canonical link: here, not in the root layout, so the not-found page doesn't
@@ -17,8 +17,18 @@ export const metadata: Metadata = {
 const photosBefore = (index: number) =>
   services.slice(0, index).filter(({ image }) => image !== undefined).length;
 
+// `<` escaped so no text in the data can close the script tag early.
+const localBusinessJson = JSON.stringify(localBusinessData).replace(
+  /</g,
+  '\\u003c',
+);
+
 const HomePage = () => (
   <PageTemplate>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: localBusinessJson }}
+    />
     <Hero />
     {services.map((service, index) => {
       const photoNumber = photosBefore(index);

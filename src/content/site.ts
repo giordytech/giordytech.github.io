@@ -76,6 +76,23 @@ export const addressLine = (() => {
   return `${street}, ${postalCode} ${locality} ${region}`;
 })();
 
+/** The business as schema.org structured data, for search engines' local results. */
+export const localBusinessData = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: site.name,
+  url: site.url,
+  telephone: site.contact.phone,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: site.contact.address.street,
+    postalCode: site.contact.address.postalCode,
+    addressLocality: site.contact.address.locality,
+    addressRegion: site.contact.address.region,
+    addressCountry: site.contact.address.country,
+  },
+} as const;
+
 export const services: readonly Service[] = [
   {
     id: 'pc-gaming',
