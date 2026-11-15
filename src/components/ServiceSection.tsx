@@ -4,22 +4,13 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import Section, { type SectionTone } from '@/components/Section.tsx';
-import { type Service, services } from '@/content/site.ts';
+import type { Photo, Service } from '@/content/site.ts';
 
-/**
- * Every service photo is a 1280×960 `.jpg`, with 640- and 960-pixel-wide copies beside it (`name-640.jpg`), so
- * a phone doesn't download the full size for a 343-pixel-wide column. 1280 is the originals' own width: high-
- * density screens between 600 and 899 pixels wide could use more, but there is nothing sharper to give them.
- */
-const photo = { width: 1280, height: 960, smallerWidths: [640, 960] } as const;
-
-const photoSrcSet = (src: string) =>
-  [
-    ...photo.smallerWidths.map(
-      (width) => `${src.replace(/\.jpg$/, `-${width}.jpg`)} ${width}w`,
-    ),
-    `${src} ${photo.width}w`,
-  ].join(', ');
+/** Every copy of the photo with its width, so the browser picks the smallest that is sharp enough. */
+const photoSrcSet = ({ src, width, smallerCopies }: Photo) =>
+  [...smallerCopies, { src, width }]
+    .map((copy) => `${copy.src} ${copy.width}w`)
+    .join(', ');
 
 /**
  * The photo column's width. Below `md`: the page less its 16-pixel side padding. From `md`: half of what is
@@ -27,11 +18,6 @@ const photoSrcSet = (src: string) =>
  */
 const photoSizes =
   '(min-width: 1200px) 544px, (min-width: 900px) calc(50vw - 56px), calc(100vw - 32px)';
-
-/** The first photo can be on screen when the page opens on a wide screen; later ones load as they come near. */
-const firstPhotoServiceId = services.find(
-  ({ image }) => image !== undefined,
-)?.id;
 
 /** The examples as a bordered card with a check per item, as the cards in Neve's demo. */
 const ExamplesCard = ({ examples }: { examples: readonly string[] }) => (
@@ -74,13 +60,20 @@ interface Props {
   tone: SectionTone;
   /** Puts the photo on the left on wide screens, so consecutive sections alternate sides. */
   imageFirst?: boolean;
+  /** How the photo loads: `eager` for one on screen when the page opens, `lazy` (the default) for the rest. */
+  photoLoading?: 'eager' | 'lazy';
 }
 
 /**
  * One service as a full-width band, as Neve's two-column sections: title, text and examples on one side, the
  * photo on the other. Without a photo, the examples card takes the second column.
  */
-const ServiceSection = ({ service, tone, imageFirst = false }: Props) => {
+const ServiceSection = ({
+  service,
+  tone,
+  imageFirst = false,
+  photoLoading = 'lazy',
+}: Props) => {
   const { image, examples } = service;
   const hasSecondColumn = image !== undefined || examples !== undefined;
 
@@ -124,11 +117,11 @@ const ServiceSection = ({ service, tone, imageFirst = false }: Props) => {
             {/* A plain <img>: MUI's Box would take width and height as styles, not as the file's size. */}
             <img
               src={image.src}
-              srcSet={photoSrcSet(image.src)}
+              srcSet={photoSrcSet(image)}
               sizes={photoSizes}
-              width={photo.width}
-              height={photo.height}
-              loading={service.id === firstPhotoServiceId ? 'eager' : 'lazy'}
+              width={image.width}
+              height={image.height}
+              loading={photoLoading}
               alt={image.alt}
             />
           </Box>

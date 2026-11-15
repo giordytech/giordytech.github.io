@@ -26,6 +26,8 @@ const HomePage = () => (
         service={service}
         tone={index % 2 === 0 ? 'alt' : 'plain'}
         imageFirst={photosBefore(index) % 2 === 1}
+        // The first photo is on screen when the page opens on a wide screen; the others load as they come near.
+        photoLoading={photosBefore(index) === 0 ? 'eager' : 'lazy'}
       />
     ))}
     <ContactBand />

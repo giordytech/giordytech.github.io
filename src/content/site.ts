@@ -10,7 +10,16 @@ export interface Service {
   paragraphs: readonly string[];
   /** Introduced by "Esempi:". */
   examples?: readonly string[];
-  image?: { src: string; alt: string };
+  image?: Photo;
+}
+
+/** A photo at its full size, with smaller copies of the same picture for narrower screens. */
+export interface Photo {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  smallerCopies: readonly { src: string; width: number }[];
 }
 
 export const site = {
@@ -43,7 +52,16 @@ export const services: readonly Service[] = [
       'Una volta completata la selezione, provvederò ad ordinare i tuoi componenti a prezzi competitivi.',
       "Provvederò a completare l'intero assemblaggio in modo che tu possa immediatamente iniziare a sfruttare la potenza del tuo nuovo PC.",
     ],
-    image: { src: '/images/pc-gaming.jpg', alt: 'PC gaming desktop' },
+    image: {
+      src: '/images/pc-gaming.jpg',
+      alt: 'PC gaming desktop',
+      width: 1280,
+      height: 960,
+      smallerCopies: [
+        { src: '/images/pc-gaming-640.jpg', width: 640 },
+        { src: '/images/pc-gaming-960.jpg', width: 960 },
+      ],
+    },
   },
   {
     id: 'vecchio-pc',
@@ -71,6 +89,15 @@ export const services: readonly Service[] = [
       'Riparazione installazioni',
       'Recupero dati con software dedicati',
     ],
-    image: { src: '/images/riparazioni.jpg', alt: 'Riparazioni hardware' },
+    image: {
+      src: '/images/riparazioni.jpg',
+      alt: 'Riparazioni hardware',
+      width: 1280,
+      height: 960,
+      smallerCopies: [
+        { src: '/images/riparazioni-640.jpg', width: 640 },
+        { src: '/images/riparazioni-960.jpg', width: 960 },
+      ],
+    },
   },
 ];
