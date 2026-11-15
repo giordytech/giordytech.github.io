@@ -41,7 +41,10 @@ export const site = {
   tagline: 'Assemblaggio e riparazione hardware.',
   /** The home page's title in search results and link previews, worded as on the old site. */
   homeTitle: 'Assemblaggio PC desktop con allestimento gaming | GiordyTech',
-  /** The picture shown when a link to the site is shared: the logo, centered on white, at 1200×630. */
+  /**
+   * The picture shown when a link to the site is shared: the square social-media logo, centered on the brand blue,
+   * at 1200×630. Its margins are the designer's, so a platform that crops it to a circle keeps the whole mark.
+   */
   sharePreview: {
     src: '/images/logo-og.png',
     width: 1200,
