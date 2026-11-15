@@ -1,15 +1,12 @@
-import ContentFittedStack from '@/components/ContentFittedStack.tsx';
+import Box from '@mui/material/Box';
+
 import Footer from '@/components/Footer.tsx';
 import Header from '@/components/Header.tsx';
 import StackLayout from '@/components/StackLayout.tsx';
-import TopBar from '@/components/TopBar.tsx';
-import { staticTheme } from '@/styles/staticTheme.ts';
-
-const contentMaxWidth = staticTheme.breakpoints.values.md;
 
 /**
- * Every page's frame: top bar, header, content centered within a readable width, footer. After
- * swiftpost-site-template's SimplePageTemplate.
+ * Every page's frame, as the WordPress Neve theme's: header, full-width content bands, dark footer. The page
+ * lays out its own bands (`Section`), each holding its content within the site's container.
  */
 const PageTemplate = ({ children }: { children: React.ReactNode }) => (
   <StackLayout
@@ -17,22 +14,15 @@ const PageTemplate = ({ children }: { children: React.ReactNode }) => (
       mainContainer: {
         children: (
           <>
-            <TopBar />
-            <Header contentMaxWidth={contentMaxWidth} />
-            <ContentFittedStack
-              component="main"
-              contentMaxWidth={contentMaxWidth}
-              padding={2}
-              spacing={6}
-              sx={{ paddingY: 6 }}
-            >
+            <Header />
+            <Box component="main" sx={{ flexGrow: 1 }}>
               {children}
-            </ContentFittedStack>
+            </Box>
           </>
         ),
       },
       footerContainer: {
-        children: <Footer contentMaxWidth={contentMaxWidth} />,
+        children: <Footer />,
       },
     }}
   />
