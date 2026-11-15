@@ -40,7 +40,7 @@ export const site = {
   url: 'https://giordytech.github.io/',
   tagline: 'Assemblaggio e riparazione hardware.',
   /** The home page's title in search results and link previews, worded as on the old site. */
-  homeTitle: 'Assemblaggio PC desktop con allestimento gaming | Giordytech',
+  homeTitle: 'Assemblaggio PC desktop con allestimento gaming | GiordyTech',
   /** The picture shown when a link to the site is shared: the logo, centered on white, at 1200×630. */
   sharePreview: {
     src: '/images/logo-og.png',
