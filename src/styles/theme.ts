@@ -3,11 +3,11 @@
  * on `<html>` (`InitColorSchemeScript` in the root layout sets it before the page shows, so it never flashes
  * the other mode).
  *
- * The colors follow the WordPress Neve theme's "Base" and "Dark Mode" palettes, with GiordyTech's own blue (from
- * its logo, #002a9f, and the logo gradient's darker end for hover) as the light mode's accent. One departure,
- * for contrast: Neve's dark accent (#0065cb) reads at about 3.2:1 as text on its dark background, under the
- * 4.5:1 that body text needs, so in dark mode links and focus rings use a lighter blue while buttons keep the
- * Neve fill.
+ * The colors follow the WordPress Neve theme's "Base" and "Dark Mode" palettes, with two departures. In light
+ * mode the accent is GiordyTech's own blue, #002a9f, with #001d7f for hover: both are fills in the owner's
+ * color logo files, which are not in this repo. In dark mode, for contrast: Neve's accent (#0065cb) reads at
+ * about 3.2:1 as text on its dark background, under the 4.5:1 that body text needs, so links and focus rings
+ * use a lighter blue while buttons keep the Neve fill.
  */
 'use client';
 
