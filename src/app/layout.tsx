@@ -12,14 +12,22 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: site.name, template: `%s · ${site.name}` },
   description: site.tagline,
+  // No title here: each page's own title becomes its og:title and twitter:title.
   openGraph: {
     type: 'website',
     locale: 'it_IT',
     siteName: site.name,
-    title: site.name,
     description: site.tagline,
+    images: [
+      {
+        url: site.sharePreview.src,
+        width: site.sharePreview.width,
+        height: site.sharePreview.height,
+        alt: site.sharePreview.alt,
+      },
+    ],
   },
-  twitter: { card: 'summary', title: site.name, description: site.tagline },
+  twitter: { card: 'summary_large_image' },
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
