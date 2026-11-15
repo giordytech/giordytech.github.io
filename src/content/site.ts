@@ -51,9 +51,30 @@ export const site = {
   logo: { src: '/images/logo.png', alt: 'GiordyTech' },
   contact: {
     label: 'Contattaci oggi stesso, non aspettare!',
+    /** From the owner's flyer. */
+    offer: 'Preventivo gratuito e senza impegno',
     email: 'giordytech@gmail.com',
+    // Phone and address as the business publishes them on Google Maps.
+    phone: '+39 379 146 1433',
+    address: {
+      street: 'Via S. Andrea, 27',
+      postalCode: '09010',
+      locality: 'Gonnesa',
+      /** The province's code: Sud Sardegna. */
+      region: 'SU',
+      country: 'IT',
+    },
   },
 } as const;
+
+/** The phone number as a link that starts a call. */
+export const phoneHref = `tel:${site.contact.phone.replaceAll(' ', '')}`;
+
+/** The address on one line, as Google Maps shows it: "Via S. Andrea, 27, 09010 Gonnesa SU". */
+export const addressLine = (() => {
+  const { street, postalCode, locality, region } = site.contact.address;
+  return `${street}, ${postalCode} ${locality} ${region}`;
+})();
 
 export const services: readonly Service[] = [
   {
