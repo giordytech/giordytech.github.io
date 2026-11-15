@@ -7,8 +7,9 @@ import Section, { type SectionTone } from '@/components/Section.tsx';
 import { type Service, services } from '@/content/site.ts';
 
 /**
- * Every service photo is 1280×960, with 640- and 960-pixel-wide copies beside it (`name-640.jpg`), so a
- * phone doesn't download the full size for a 343-pixel-wide column.
+ * Every service photo is a 1280×960 `.jpg`, with 640- and 960-pixel-wide copies beside it (`name-640.jpg`), so
+ * a phone doesn't download the full size for a 343-pixel-wide column. 1280 is the originals' own width: high-
+ * density screens between 600 and 899 pixels wide could use more, but there is nothing sharper to give them.
  */
 const photo = { width: 1280, height: 960, smallerWidths: [640, 960] } as const;
 
@@ -20,8 +21,12 @@ const photoSrcSet = (src: string) =>
     `${src} ${photo.width}w`,
   ].join(', ');
 
-/** The photo column: the page width on small screens, half the 1200-pixel container from `md` up. */
-const photoSizes = '(min-width: 900px) 544px, 100vw';
+/**
+ * The photo column's width. Below `md`: the page less its 16-pixel side padding. From `md`: half of what is
+ * left of the page (at most 1200 pixels) after 24 pixels of padding per side and the 64-pixel column gap.
+ */
+const photoSizes =
+  '(min-width: 1200px) 544px, (min-width: 900px) calc(50vw - 56px), calc(100vw - 32px)';
 
 /** The first photo can be on screen when the page opens on a wide screen; later ones load as they come near. */
 const firstPhotoServiceId = services.find(
