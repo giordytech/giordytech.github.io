@@ -25,8 +25,8 @@ export interface PhotoCopy {
 /**
  * A photo at its full size, with smaller copies so a phone doesn't download the full size for a 343-pixel-wide
  * column. The numbers must match the files in `public/images/`: nothing checks them. The service photos are
- * 1280 pixels wide, the originals' own width; high-density screens between 600 and 899 pixels wide could use
- * more, but there is nothing sharper to give them.
+ * at most 1280 pixels wide, or their originals' own width when narrower (the Task Manager screenshot is 1190);
+ * high-density screens between 600 and 899 pixels wide could use more, but there is nothing sharper to give them.
  */
 export interface Photo {
   src: string;
@@ -112,8 +112,8 @@ export const localBusinessData = {
 /**
  * The services, headed with the owner's flyer wording ("Volantino A5"). The order is a guess with no sales data
  * behind it: PC builds first, as the old site and the home title lead with them, then repairs, the first word of
- * the Facebook page's title. The two services only the flyer names have a heading and nothing more until the
- * owner writes about them.
+ * the Facebook page's title. The two services only the flyer names have a heading and the flyer's photo, and
+ * no text until the owner writes about them.
  */
 export const services: readonly Service[] = [
   {
@@ -163,6 +163,17 @@ export const services: readonly Service[] = [
       'Controllo e pulizia virus / malware',
       'Selezione ed installazione componenti hardware potenziati',
     ],
+    // The flyer pairs this service with this screenshot.
+    image: {
+      src: '/images/pulizia-pc.jpg',
+      alt: 'Gestione attività di Windows, con il grafico di utilizzo della CPU',
+      width: 1190,
+      height: 746,
+      smallerCopies: [
+        { src: '/images/pulizia-pc-640.jpg', width: 640 },
+        { src: '/images/pulizia-pc-960.jpg', width: 960 },
+      ],
+    },
   },
   {
     id: 'installazione-hardware',
@@ -184,5 +195,16 @@ export const services: readonly Service[] = [
     id: 'installazione-software',
     title: 'Installazione e configurazione applicazioni e software',
     paragraphs: [],
+    // The flyer pairs this service with this photo.
+    image: {
+      src: '/images/installazione-software.jpg',
+      alt: 'Computer portatile con un programma di fotoritocco aperto',
+      width: 1280,
+      height: 853,
+      smallerCopies: [
+        { src: '/images/installazione-software-640.jpg', width: 640 },
+        { src: '/images/installazione-software-960.jpg', width: 960 },
+      ],
+    },
   },
 ];
