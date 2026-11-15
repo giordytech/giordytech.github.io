@@ -5,11 +5,16 @@ import type { Metadata } from 'next';
 import Section from '@/components/Section.tsx';
 import PageTemplate from '@/templates/PageTemplate.tsx';
 
-export const metadata: Metadata = { title: 'Pagina non trovata' };
+const title = 'Pagina non trovata';
+
+export const metadata: Metadata = { title };
 
 const NotFound = () => (
   <PageTemplate>
-    <Section>
+    <Section spacing={3}>
+      <Typography variant="h2" component="h1">
+        {title}
+      </Typography>
       <Typography>
         Questa pagina non esiste. <Link href="/">Torna alla home</Link>.
       </Typography>
