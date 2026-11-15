@@ -1,0 +1,5 @@
+skills
+settings.local.json
+
+# worktrees an agent makes for a session of its own
+worktrees/

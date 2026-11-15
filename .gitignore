@@ -1,5 +1,26 @@
-_site
-.sass-cache
-Gemfile.lock
-*.gem
-.jekyll-cache
+# dependencies
+node_modules/
+
+# Next.js: dev and build folders, the static export
+.next/
+out/
+next-env.d.ts
+
+# agent local workspaces (never committed)
+.agents/tasks/
+.agents/retro/
+.agents/playground/
+.agents/local/
+
+# playwright-cli: login state and session output
+**/playwright/.auth/
+.playwright-cli/
+
+# misc
+.DS_Store
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env*.local

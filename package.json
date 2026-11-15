@@ -1,0 +1,49 @@
+{
+  "name": "giordytech",
+  "version": "0.0.1",
+  "private": true,
+  "description": "GiordyTech's website: PC assembly, upgrades and repairs.",
+  "type": "module",
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && node scripts/flattenSegments.mts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.node.json",
+    "playwright": "playwright-cli",
+    "sync:skills": "agentic-tools skills sync",
+    "link:claude-skills": "node scripts/linkClaudeSkills.mts",
+    "postinstall": "yarn -s sync:skills && yarn -s link:claude-skills"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/cli": "^0.1.22",
+    "@types/node": "^24",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "agentic-tools": "git+https://github.com/swiftpostlabs/agentic-tools.git#1fc712ae5cf891e5904b538aab75ac7ebe4561a3",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.7",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.9",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.1"
+  },
+  "dependencies": {
+    "@emotion/cache": "11.14.0",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@mui/icons-material": "7.3.11",
+    "@mui/material": "7.3.11",
+    "@mui/material-nextjs": "7.3.10",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  }
+}

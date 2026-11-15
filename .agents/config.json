@@ -1,0 +1,31 @@
+{
+  "skills": {
+    "sources": [
+      {
+        "from": "package:agentic-tools",
+        "skills": [
+          "ref-sp-agents-mr-wolf-persona",
+          "ref-sp-agents-verification-discipline",
+          "ref-sp-agents-instructions-authoring",
+          "tool-sp-maintain-agents-instructions",
+          "ref-sp-agents-local-tasks",
+          "tool-sp-handle-agents-local-tasks",
+          "ref-sp-agents-retro",
+          "ref-sp-dev-git-commits",
+          "tool-sp-commit",
+          "ref-sp-dev-coding-patterns",
+          "ref-sp-dev-projects-architecture",
+          "ref-sp-dev-docs-authoring",
+          "ref-sp-dev-playwright-cli",
+          "ref-sp-js-typescript",
+          "ref-sp-js-react",
+          "ref-sp-js-next",
+          "ref-sp-js-next-template",
+          "ref-sp-ux-design",
+          "ref-sp-ux-accessibility",
+          "ref-sp-web-seo"
+        ]
+      }
+    ]
+  }
+}
