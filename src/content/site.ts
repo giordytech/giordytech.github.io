@@ -42,8 +42,9 @@ export const site = {
   /** The home page's title in search results and link previews, worded as on the old site. */
   homeTitle: 'Assemblaggio PC desktop con allestimento gaming | GiordyTech',
   /**
-   * The picture shown when a link to the site is shared: the square social-media logo, centered on the brand blue,
-   * at 1200×630. Its margins are the designer's, so a platform that crops it to a circle keeps the laptop and the name.
+   * The picture shown when a link to the site is shared, at 1200×630: the square social-media logo in the middle,
+   * its blue gradient carried across the whole picture so it reads as one background. Its margins are the
+   * designer's, so a platform that crops it to a circle keeps the laptop and the name.
    */
   sharePreview: {
     src: '/images/logo-og.png',
