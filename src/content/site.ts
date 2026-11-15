@@ -60,7 +60,7 @@ export const site = {
       street: 'Via S. Andrea, 27',
       postalCode: '09010',
       locality: 'Gonnesa',
-      /** The province's code: Sud Sardegna. */
+      /** The province's two-letter code, as the business publishes it. */
       region: 'SU',
       country: 'IT',
     },
@@ -70,11 +70,10 @@ export const site = {
 /** The phone number as a link that starts a call. */
 export const phoneHref = `tel:${site.contact.phone.replaceAll(' ', '')}`;
 
+const { address } = site.contact;
+
 /** The address on one line, as Google Maps shows it: "Via S. Andrea, 27, 09010 Gonnesa SU". */
-export const addressLine = (() => {
-  const { street, postalCode, locality, region } = site.contact.address;
-  return `${street}, ${postalCode} ${locality} ${region}`;
-})();
+export const addressLine = `${address.street}, ${address.postalCode} ${address.locality} ${address.region}`;
 
 /** The business as schema.org structured data, for search engines' local results. */
 export const localBusinessData = {
