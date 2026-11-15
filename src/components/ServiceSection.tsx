@@ -65,8 +65,8 @@ interface Props {
 }
 
 /**
- * One service as a full-width band, as Neve's two-column sections: title, text and examples on one side, the
- * photo on the other. Without a photo, the examples card takes the second column.
+ * One service as a full-width band, as Neve's two-column sections: title, opening line, text and examples on one
+ * side, the photo on the other. Without a photo, the examples card takes the second column.
  */
 const ServiceSection = ({
   service,
@@ -92,6 +92,9 @@ const ServiceSection = ({
       >
         <Stack spacing={3}>
           <Typography variant="h2">{service.title}</Typography>
+          {service.lead !== undefined && (
+            <Typography fontWeight={700}>{service.lead}</Typography>
+          )}
           {service.paragraphs.map((paragraph) => (
             <Typography key={paragraph} color="text.secondary">
               {paragraph}

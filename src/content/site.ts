@@ -8,6 +8,8 @@ export interface Service {
   /** The section's anchor, such as `#riparazioni`. */
   id: string;
   title: string;
+  /** The section's earlier heading, kept as its bold opening line where the flyer's wording took its place. */
+  lead?: string;
   paragraphs: readonly string[];
   /** Introduced by "Esempi:". */
   examples?: readonly string[];
@@ -107,10 +109,16 @@ export const localBusinessData = {
   },
 } as const;
 
+/**
+ * The services, headed with the owner's flyer wording ("Volantino A5"), in the order a visitor most likely
+ * wants them: PC builds first, as the old site and the home title lead with them, then repairs. The two
+ * services only the flyer names have a heading and nothing more until the owner writes about them.
+ */
 export const services: readonly Service[] = [
   {
     id: 'pc-gaming',
-    title: 'Assemblaggio PC desktop con allestimento gaming',
+    title: 'Realizzazione PC per ogni esigenza: Studio, Lavoro, Gaming',
+    lead: 'Assemblaggio PC desktop con allestimento gaming',
     paragraphs: [
       'Scegliamo assieme i componenti migliori per il tuo allestimento per un PC gaming desktop in base alle tue esigenze.',
       'Una volta completata la selezione, provvederò ad ordinare i tuoi componenti a prezzi competitivi.',
@@ -128,19 +136,6 @@ export const services: readonly Service[] = [
     },
   },
   {
-    id: 'vecchio-pc',
-    title: 'Trasforma il tuo vecchio PC in uno come nuovo',
-    paragraphs: [
-      'Spesso non è necessario comprare un nuovo PC spendendo tanti soldi. Con una spesa molto contenuta, possiamo applicare piccole migliorie a livello hardware/software dai grandi risultati. Non crederai ai tuoi occhi!',
-    ],
-    examples: [
-      'Aggiornamento sistema operativo',
-      'Pulizia di sistema',
-      'Controllo e pulizia virus / malware',
-      'Selezione ed installazione componenti hardware potenziati',
-    ],
-  },
-  {
     id: 'riparazioni',
     title: 'Riparazioni hardware e software',
     paragraphs: [
@@ -153,6 +148,26 @@ export const services: readonly Service[] = [
       'Riparazione installazioni',
       'Recupero dati con software dedicati',
     ],
+  },
+  {
+    id: 'vecchio-pc',
+    title: 'Pulizia e ottimizzazioni PC, aggiornamenti, backup e ripristino',
+    lead: 'Trasforma il tuo vecchio PC in uno come nuovo',
+    paragraphs: [
+      'Spesso non è necessario comprare un nuovo PC spendendo tanti soldi. Con una spesa molto contenuta, possiamo applicare piccole migliorie a livello hardware/software dai grandi risultati. Non crederai ai tuoi occhi!',
+    ],
+    examples: [
+      'Aggiornamento sistema operativo',
+      'Pulizia di sistema',
+      'Controllo e pulizia virus / malware',
+      'Selezione ed installazione componenti hardware potenziati',
+    ],
+  },
+  {
+    id: 'installazione-hardware',
+    title: 'Installazione Hardware e Driver: Schede Grafiche, Ventole, Webcam',
+    paragraphs: [],
+    // The flyer pairs this service with this photo.
     image: {
       src: '/images/riparazioni.jpg',
       alt: 'Riparazioni hardware',
@@ -163,5 +178,10 @@ export const services: readonly Service[] = [
         { src: '/images/riparazioni-960.jpg', width: 960 },
       ],
     },
+  },
+  {
+    id: 'installazione-software',
+    title: 'Installazione e configurazione applicazione e software',
+    paragraphs: [],
   },
 ];
