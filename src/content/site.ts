@@ -67,6 +67,13 @@ export const site = {
   },
 } as const;
 
+/** The page shown for an address that doesn't exist. */
+export const notFoundPage = {
+  title: 'Pagina non trovata',
+  message: 'Questa pagina non esiste.',
+  homeLink: 'Torna alla home',
+} as const;
+
 /** The phone number as a link that starts a call. */
 export const phoneHref = `tel:${site.contact.phone.replaceAll(' ', '')}`;
 
