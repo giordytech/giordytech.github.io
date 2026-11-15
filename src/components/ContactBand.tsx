@@ -53,7 +53,8 @@ const ContactBand = () => (
             borderWidth: 2,
             '&:hover': {
               borderColor: 'common.white',
-              bgcolor: 'rgba(255, 255, 255, 0.12)',
+              // Faint enough that white text keeps 4.5:1 over the dark theme's lighter blue (about 4.9:1).
+              bgcolor: 'rgba(255, 255, 255, 0.08)',
             },
             ...focusOnBand,
           }}
