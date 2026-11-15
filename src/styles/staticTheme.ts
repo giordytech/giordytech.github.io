@@ -15,27 +15,17 @@ const breakpoints = {
 } as const;
 
 /** The widest the page content gets, as in Neve's default container. */
-export const containerMaxWidth = 1170;
+export const containerMaxWidth = 1200;
 
 /** The system's own interface font: no web font to download. */
 const systemFont =
   'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
 
-const tabletUp = `@media (min-width:${breakpoints.values.sm}px)`;
-const desktopUp = `@media (min-width:${breakpoints.values.md}px)`;
-
-/** A heading size per screen width, mobile first, in pixels. */
-const responsiveHeading = (
-  mobile: number,
-  tablet: number,
-  desktop: number,
-  lineHeight: number,
-) => ({
-  fontSize: `${mobile / 16}rem`,
+/** A heading at Neve's default size, in pixels, and weight. */
+const heading = (sizePx: number, lineHeight: number) => ({
+  fontSize: `${sizePx / 16}rem`,
   fontWeight: 700,
   lineHeight,
-  [tabletUp]: { fontSize: `${tablet / 16}rem` },
-  [desktopUp]: { fontSize: `${desktop / 16}rem` },
 });
 
 export const staticThemeOptions = {
@@ -51,12 +41,14 @@ export const staticThemeOptions = {
   },
   typography: {
     fontFamily: systemFont,
-    h1: responsiveHeading(32, 42, 56, 1.1),
-    h2: responsiveHeading(28, 36, 44, 1.2),
-    h3: responsiveHeading(20, 22, 24, 1.3),
-    h4: responsiveHeading(18, 20, 20, 1.4),
-    body1: { fontSize: '1rem', lineHeight: 1.6 },
-    body2: { fontSize: '0.875rem', lineHeight: 1.6 },
+    h1: heading(40, 1.2),
+    h2: heading(32, 1.3),
+    h3: heading(28, 1.3),
+    h4: heading(24, 1.4),
+    h5: heading(20, 1.5),
+    h6: heading(16, 1.6),
+    body1: { fontSize: '1rem', lineHeight: 1.7 },
+    body2: { fontSize: '0.875rem', lineHeight: 1.7 },
     button: { textTransform: 'none', fontWeight: 600, fontSize: '1rem' },
   },
 } as const;

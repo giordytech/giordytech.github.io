@@ -36,16 +36,16 @@ export const theme = createTheme({
   colorSchemes: {
     light: {
       palette: {
-        primary: { main: '#2563eb', dark: '#1d4ed8', contrastText: '#ffffff' },
-        text: { primary: '#1f2937', secondary: '#5b6472' },
+        primary: { main: '#2f5aae', dark: '#24478c', contrastText: '#ffffff' },
+        text: { primary: '#272626', secondary: '#5b6472' },
         background: { default: '#ffffff', paper: '#ffffff' },
         divider: '#e5e7eb',
         surface: {
-          alt: '#f1f5f9',
+          alt: '#f4f5f7',
           footer: '#111827',
           footerText: '#ffffff',
           footerLink: '#93c5fd',
-          link: '#2563eb',
+          link: '#2f5aae',
         },
       },
     },
@@ -86,7 +86,7 @@ export const theme = createTheme({
     MuiButton: {
       defaultProps: { disableElevation: true },
       styleOverrides: {
-        root: { padding: '10px 20px' },
+        root: { padding: '10px 20px', borderRadius: '3px' },
         sizeLarge: { padding: '12px 24px' },
       },
     },
