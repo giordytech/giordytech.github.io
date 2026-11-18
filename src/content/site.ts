@@ -87,6 +87,12 @@ export const notFoundPage = {
 /** A chat with the business number on WhatsApp: the number in international form, digits only. */
 export const whatsappHref = `https://wa.me/${site.contact.phone.replace(/\D/g, '')}`;
 
+/**
+ * A chat with the business number on Telegram. It opens only if the account lets people find it by phone number
+ * (Telegram's privacy setting "Who can find me by my number").
+ */
+export const telegramHref = `https://t.me/+${site.contact.phone.replace(/\D/g, '')}`;
+
 /** The phone number as a link that starts a call. */
 export const phoneHref = `tel:${site.contact.phone.replaceAll(' ', '')}`;
 

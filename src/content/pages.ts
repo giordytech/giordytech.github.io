@@ -18,10 +18,9 @@ export const requestTypes = [
   'Altro',
 ] as const;
 
-/** The line for urgent matters, on the home page and the contact page: call, or write on WhatsApp. */
+/** The line for urgent matters, on the home page and the contact page: the number, then WhatsApp and Telegram. */
 export const urgent = {
-  text: 'Hai un’urgenza? Chiama o scrivi su WhatsApp:',
-  whatsapp: 'Scrivi su WhatsApp',
+  text: 'Hai un’urgenza? Contattaci al',
 } as const;
 
 export const contactPage = {
