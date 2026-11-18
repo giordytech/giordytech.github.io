@@ -4,6 +4,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import ContentFittedStack from '@/components/ContentFittedStack.tsx';
+import { contactPage, privacyPage } from '@/content/pages.ts';
 import { addressLine, phoneHref, site } from '@/content/site.ts';
 import { containerMaxWidth } from '@/styles/staticTheme.ts';
 
@@ -46,6 +47,24 @@ const Footer = () => (
           </Link>
         </Typography>
         <Typography variant="body2">{addressLine}</Typography>
+      </Stack>
+      <Stack
+        component="nav"
+        aria-label="Link utili"
+        direction="row"
+        columnGap={3}
+        paddingTop={1.5}
+      >
+        <Typography variant="body2">
+          <Link href={contactPage.path} color="inherit" sx={footerLinkSx}>
+            Contatti
+          </Link>
+        </Typography>
+        <Typography variant="body2">
+          <Link href={privacyPage.path} color="inherit" sx={footerLinkSx}>
+            {privacyPage.title}
+          </Link>
+        </Typography>
       </Stack>
     </ContentFittedStack>
   </Box>
