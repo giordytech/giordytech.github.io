@@ -49,44 +49,46 @@ export const contactPage = {
   },
 } as const;
 
+/**
+ * The privacy and cookie notice: short and generic on purpose, worded so it still holds if the site later adds
+ * cookies, analytics or a form backend. It names no hosting or other provider.
+ */
 export const privacyPage = {
   path: '/privacy/',
   title: 'Privacy e cookie',
   description:
-    'Come GiordyTech tratta i dati di chi visita il sito e invia una richiesta.',
-  heading: 'Informativa su privacy e cookie',
+    'Informativa sul trattamento dei dati personali e sull’uso dei cookie del sito GiordyTech.',
+  heading: 'Informativa privacy e cookie',
   sections: [
     {
-      title: 'Chi tratta i dati',
+      title: 'Titolare del trattamento',
       paragraphs: [
-        'Il titolare del trattamento è GiordyTech. Per qualsiasi domanda sui tuoi dati puoi scrivere a giordytech@gmail.com.',
+        'Titolare del trattamento è GiordyTech, contattabile all’indirizzo giordytech@gmail.com.',
+      ],
+    },
+    {
+      title: 'Dati trattati e finalità',
+      paragraphs: [
+        'Sono trattati i dati di navigazione acquisiti dai sistemi informatici nel normale funzionamento del sito, e i dati forniti volontariamente dall’utente tramite il modulo di contatto, l’email, il telefono o i servizi di messaggistica.',
+        'I dati sono trattati per fornire il sito, garantirne la sicurezza, rispondere alle richieste e svolgere i servizi richiesti. Base giuridica: l’esecuzione di misure precontrattuali o del contratto, il legittimo interesse del titolare e, ove richiesto, il consenso dell’interessato (art. 6 GDPR).',
       ],
     },
     {
       title: 'Cookie',
       paragraphs: [
-        'Questo sito non usa cookie, né di profilazione né di statistica, e non contiene strumenti di tracciamento di terze parti.',
-        'Il sito ricorda nel tuo browser solo se preferisci il tema chiaro o scuro. È un’impostazione tecnica: resta sul tuo dispositivo e non viene inviata a nessuno.',
+        'Il sito può utilizzare cookie tecnici e strumenti analoghi, necessari al suo funzionamento, per i quali non è richiesto il consenso. Eventuali cookie analitici o di terze parti non strettamente necessari sono utilizzati solo previo consenso, revocabile in qualsiasi momento.',
       ],
     },
     {
-      title: 'Richieste di assistenza',
+      title: 'Comunicazione e conservazione',
       paragraphs: [
-        'Il modulo nella pagina Contatti non invia dati al sito: prepara un messaggio nella tua app di posta, che spedisci tu.',
-        'Usiamo i dati che ci scrivi (nome, contatto, descrizione del problema) solo per risponderti e, se lo chiedi, per svolgere il lavoro. Non li cediamo a terzi e non li usiamo per pubblicità.',
-        'Conserviamo i messaggi per il tempo necessario a gestire la richiesta e gli eventuali obblighi di legge. Puoi chiedere in ogni momento di vederli, correggerli o cancellarli scrivendo all’indirizzo sopra.',
+        'I dati non sono diffusi né ceduti a terzi per finalità commerciali. Possono essere trattati da fornitori di servizi tecnici che agiscono come responsabili del trattamento, anche al di fuori dell’Unione europea, con le garanzie previste dal GDPR. I dati sono conservati per il tempo necessario alle finalità indicate e agli obblighi di legge.',
       ],
     },
     {
-      title: 'Hosting',
+      title: 'Diritti dell’interessato',
       paragraphs: [
-        'Il sito è pubblicato su GitHub Pages (GitHub, Inc.), che per ragioni tecniche e di sicurezza può registrare l’indirizzo IP di chi visita le pagine. Maggiori dettagli nell’informativa privacy di GitHub.',
-      ],
-    },
-    {
-      title: 'I tuoi diritti',
-      paragraphs: [
-        'Hai i diritti previsti dal Regolamento UE 2016/679 (GDPR), compreso quello di presentare reclamo al Garante per la protezione dei dati personali.',
+        'L’interessato può esercitare i diritti di cui agli artt. 15-22 del Regolamento UE 2016/679 (GDPR): accesso, rettifica, cancellazione, limitazione, portabilità, opposizione e revoca del consenso, scrivendo al titolare. Ha inoltre il diritto di proporre reclamo al Garante per la protezione dei dati personali.',
       ],
     },
   ],
