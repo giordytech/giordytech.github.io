@@ -18,6 +18,12 @@ export const requestTypes = [
   'Altro',
 ] as const;
 
+/** The line for urgent matters, on the home page and the contact page: call, or write on WhatsApp. */
+export const urgent = {
+  text: 'Hai un’urgenza? Chiama o scrivi su WhatsApp:',
+  whatsapp: 'Scrivi su WhatsApp',
+} as const;
+
 export const contactPage = {
   path: '/contact/',
   title: 'Contatti e richiesta di assistenza',

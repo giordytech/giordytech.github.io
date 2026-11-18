@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 
 import RequestForm from '@/components/RequestForm.tsx';
 import Section from '@/components/Section.tsx';
+import UrgentContact from '@/components/UrgentContact.tsx';
 import { contactPage } from '@/content/pages.ts';
 import PageTemplate from '@/templates/PageTemplate.tsx';
 
@@ -24,6 +25,9 @@ const ContactPage = () => (
           {paragraph}
         </Typography>
       ))}
+      <Stack alignItems="flex-start" paddingTop={1}>
+        <UrgentContact />
+      </Stack>
     </Section>
     <Section>
       <Stack sx={{ maxWidth: 640 }}>

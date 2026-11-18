@@ -84,6 +84,9 @@ export const notFoundPage = {
   homeLink: 'Torna alla home',
 } as const;
 
+/** A chat with the business number on WhatsApp: the number in international form, digits only. */
+export const whatsappHref = `https://wa.me/${site.contact.phone.replace(/\D/g, '')}`;
+
 /** The phone number as a link that starts a call. */
 export const phoneHref = `tel:${site.contact.phone.replaceAll(' ', '')}`;
 
