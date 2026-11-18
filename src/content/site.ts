@@ -101,6 +101,9 @@ const { address } = site.contact;
 /** The address on one line, as Google Maps shows it: "Via S. Andrea, 27, 09010 Gonnesa SU". */
 export const addressLine = `${address.street}, ${address.postalCode} ${address.locality} ${address.region}`;
 
+/** The address on Google Maps, searched by business name and address so it lands on the business's own listing. */
+export const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${site.name}, ${addressLine}`)}`;
+
 /** The business as schema.org structured data, for search engines' local results. */
 export const localBusinessData = {
   '@context': 'https://schema.org',

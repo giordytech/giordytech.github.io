@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 
 import ContentFittedStack from '@/components/ContentFittedStack.tsx';
 import { contactPage, privacyPage } from '@/content/pages.ts';
-import { addressLine, phoneHref, site } from '@/content/site.ts';
+import { addressLine, mapsHref, phoneHref, site } from '@/content/site.ts';
 import { containerMaxWidth } from '@/styles/staticTheme.ts';
 
 const footerLinkSx = { color: 'surface.footerLink' } as const;
@@ -46,7 +46,17 @@ const Footer = () => (
             {site.contact.phone}
           </Link>
         </Typography>
-        <Typography variant="body2">{addressLine}</Typography>
+        <Typography variant="body2">
+          <Link
+            href={mapsHref}
+            target="_blank"
+            rel="noopener"
+            color="inherit"
+            sx={footerLinkSx}
+          >
+            {addressLine}
+          </Link>
+        </Typography>
       </Stack>
       <Stack
         component="nav"

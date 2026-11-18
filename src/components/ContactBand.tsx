@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Section from '@/components/Section.tsx';
 import UrgentContact from '@/components/UrgentContact.tsx';
 import { contactPage } from '@/content/pages.ts';
-import { addressLine, site } from '@/content/site.ts';
+import { addressLine, mapsHref, site } from '@/content/site.ts';
 
 const focusOnBand = { '&.Mui-focusVisible': { outlineColor: 'common.white' } };
 
@@ -49,7 +49,11 @@ const ContactBand = () => (
           {site.contact.email}
         </Link>
       </Typography>
-      <Typography variant="body2">{addressLine}</Typography>
+      <Typography variant="body2">
+        <Link href={mapsHref} target="_blank" rel="noopener" color="inherit">
+          {addressLine}
+        </Link>
+      </Typography>
     </Stack>
   </Section>
 );
