@@ -11,6 +11,11 @@ simplified to a single app at the repository root.
 All the site's text is in [`src/content/site.ts`](src/content/site.ts): the name, tagline, contact address and
 one entry per service. Photos go in `public/images/` and are referenced as `/images/<file>`.
 
+## Writing blog articles
+
+[`docs/blog/`](docs/blog/README.md) holds the prompts for writing the blog's articles with an AI chat, and how to
+use them. The blog section of the site is not built yet.
+
 ## Running it locally
 
 Node 24 (see `.nvmrc`) and Yarn 1.22.

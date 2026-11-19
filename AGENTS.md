@@ -29,6 +29,7 @@ single app at the repo root, published to GitHub Pages at <https://giordytech.gi
 | `src/app/` | The App Router pages, built as a static export to `out/`. Route files stay thin. |
 | `src/components/`, `src/templates/`, `src/styles/` | Shared UI, the page frame, the MUI theme (light and dark). |
 | `public/images/` | Logo and photos, referenced as `/images/<file>`. |
+| `docs/` | Documentation for people working on the site, such as `docs/blog/` (the AI prompts for writing blog articles, in Italian). |
 | `scripts/` | Repo plumbing only: linking skills for Claude Code, and `flattenSegments.mts` (a build step for static hosts). |
 | `.agents/tasks/` | Anything not settled: open questions, pending work (gitignored). |
 
