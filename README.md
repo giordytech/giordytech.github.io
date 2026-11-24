@@ -1,7 +1,7 @@
 # GiordyTech
 
 Website for GiordyTech: PC gaming builds, upgrades of old PCs, and hardware and software repairs. Published at
-<https://giordytech.github.io/>.
+<https://giordytech.it/> (custom domain on GitHub Pages; giordytech.github.io redirects there).
 
 A static Next.js site after [swiftpost-site-template](https://github.com/swiftpostlabs/swiftpost-site-template),
 simplified to a single app at the repository root.

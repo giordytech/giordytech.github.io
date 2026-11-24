@@ -39,7 +39,7 @@ export interface Photo {
 export const site = {
   name: 'GiordyTech',
   /** Where the site is published: the base of canonical links, the sitemap and social previews. */
-  url: 'https://giordytech.github.io/',
+  url: 'https://giordytech.it/',
   tagline: 'Assemblaggio e riparazione hardware.',
   /** The home page's title in search results and link previews, worded as on the old site. */
   homeTitle: 'Assemblaggio PC desktop con allestimento gaming | GiordyTech',
