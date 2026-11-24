@@ -41,8 +41,11 @@ export const site = {
   /** Where the site is published: the base of canonical links, the sitemap and social previews. */
   url: 'https://giordytech.it/',
   tagline: 'Assemblaggio e riparazione hardware.',
-  /** The home page's title in search results and link previews, worded as on the old site. */
-  homeTitle: 'Assemblaggio PC desktop con allestimento gaming | GiordyTech',
+  /** The home page's title in search results and link previews: repairs first, as the main service. */
+  homeTitle: 'Riparazione PC e assistenza informatica a Gonnesa | GiordyTech',
+  /** The site's description in search results and link previews: repairs first, the main service. */
+  description:
+    'Riparazione di PC e portatili, assistenza su programmi e app, PC su misura per studio, lavoro e gaming. Preventivo gratuito e senza impegno.',
   /**
    * The picture shown when a link to the site is shared, at 1200×630: the square social-media logo in the middle,
    * its blue gradient carried across the whole picture so it reads as one background. Its margins are the

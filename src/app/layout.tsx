@@ -11,14 +11,14 @@ import { theme } from '@/styles/theme.ts';
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: site.name, template: `%s · ${site.name}` },
-  description: site.tagline,
+  description: site.description,
   // No title here: each page's own title becomes its og:title and twitter:title. A page that sets its own
   // openGraph replaces this whole object (Next merges metadata one level deep), image included: repeat it there.
   openGraph: {
     type: 'website',
     locale: 'it_IT',
     siteName: site.name,
-    description: site.tagline,
+    description: site.description,
     images: [
       {
         url: site.sharePreview.src,
